@@ -106,7 +106,7 @@ We build "user stories" as a way to structure the main capabilities of the sites
   * If so, show a win screen (`celebrate`)
 
 
-###Potential Challenges / Development Questions
+### Potential Challenges / Development Questions
 
 1. How to randomize or shuffle card locations at the beginning of the game?
 2. How to ensure that all the cards have matches?
@@ -124,5 +124,25 @@ Here are some popular bonus features that would affect your data structure plan:
 2. Can a player type in their name to see custom win messages?
 3. Can you enable a reset button to restart the race?
 4. How about a win counter that spans across multiple races?
+
+Object Types:
+ 1. User has to be able to see the cars
+ * HTML file 
+ * Car has to start on one side of the screen (in car constructor)
+ 
+ 2. Users can add cars based off total player
+ * constructor to add car
+   - 'driverName' (string)
+   - 'carColor' (string)
+   - 'carPosition' (value)
+   - 'carWon' (boolean)
+   - event listener to register click or button (step 3) (function)
+ 
+ 3. User can control the car with some input
+ * Add click event listener to cars that:
+     - move car one step when clicked or button is pushed (`click`)
+     - checks if the car is at the end ('isFinish')
+     - if car one car reach end, remove other car from DOM
+
 
 As you work, you can edit this README to add a section at the top with your name, a link to the original repository, and a 3-5 sentence reflection on completing this assignment. Push your updates to GitHub and add a link to the repo to the "My Work" section of your website!
